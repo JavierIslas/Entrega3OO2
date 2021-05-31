@@ -36,16 +36,18 @@ TopografiaCompuesta >> esIgualAgua [
 
 { #category : #boolean }
 TopografiaCompuesta >> esIgualCompuesta: unaTopografia [
-	| topografiasArray unaTopografiaArray |
-	topografiasArray := self topografia asArray.
-	unaTopografiaArray := unaTopografia topografia asArray.
-	^ (1 to: topografiasArray size)
-		allSatisfy: [ :i | (topografiasArray at: i) esIgual: (unaTopografiaArray at: i) ]
+	^ (1 to: self estructuraTopografia size)
+		allSatisfy: [ :i | (self estructuraTopografia at: i) esIgual: (unaTopografia estructuraTopografia at: i) ]
 ]
 
 { #category : #boolean }
 TopografiaCompuesta >> esIgualTierra [ 
 	^false
+]
+
+{ #category : #'as yet unclassified' }
+TopografiaCompuesta >> estructuraTopografia [
+	^self topografia asArray
 ]
 
 { #category : #'instance creation' }
