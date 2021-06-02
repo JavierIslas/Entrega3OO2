@@ -19,9 +19,9 @@ TopografiaCompuesta >> agregarTopografia: unaTopografia [
 ]
 
 { #category : #calculations }
-TopografiaCompuesta >> calcularProporcion [
+TopografiaCompuesta >> calcularProporcionAgua [
 	^(topografias
-		sum: [ :topografia | topografia proporcion ]) / 4.
+		sum: [ :topografia | topografia calcularProporcionAgua ]) / 4.
 ]
 
 { #category : #boolean }
@@ -45,7 +45,7 @@ TopografiaCompuesta >> esIgualTierra [
 	^false
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 TopografiaCompuesta >> estructuraTopografia [
 	^self topografia asArray
 ]
@@ -57,7 +57,7 @@ TopografiaCompuesta >> newTopografias: unasTopografias [
 
 { #category : #accessing }
 TopografiaCompuesta >> proporcion [
-	^ self calcularProporcion
+	^ self calcularProporcionAgua
 ]
 
 { #category : #accessing }

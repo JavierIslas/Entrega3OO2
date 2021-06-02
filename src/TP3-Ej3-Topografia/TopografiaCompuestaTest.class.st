@@ -41,6 +41,16 @@ TopografiaCompuestaTest >> setUpTopografiasCompuestas [
 ]
 
 { #category : #tests }
+TopografiaCompuestaTest >> testCalcularProporcionAgua [
+	self assert: (topografiaCompuesta calcularProporcionAgua) equals: 0.5
+]
+
+{ #category : #tests }
+TopografiaCompuestaTest >> testCalcularProporcionTierra [
+	self assert: (topografiaCompuesta calcularProporcionTierra) equals: 0.5
+]
+
+{ #category : #tests }
 TopografiaCompuestaTest >> testEsIgual [
 	| igualCompuesta distintaCompuesta |
 	igualCompuesta := TopografiaCompuesta newTopografias: topoIgual.
@@ -49,9 +59,4 @@ TopografiaCompuestaTest >> testEsIgual [
 	self deny: (topografiaCompuesta esIgual: distintaCompuesta).
 	self deny: (topografiaCompuesta esIgual: agua).
 	self deny: (topografiaCompuesta esIgual: tierra )
-]
-
-{ #category : #tests }
-TopografiaCompuestaTest >> testProporcion [
-	self assert: (topografiaCompuesta proporcion) equals: 0.5
 ]

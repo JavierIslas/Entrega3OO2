@@ -1,8 +1,16 @@
 Class {
 	#name : #TopografiaSimple,
 	#superclass : #Topografia,
+	#instVars : [
+		'proporcion'
+	],
 	#category : #'TP3-Ej3-Topografia'
 }
+
+{ #category : #accessing }
+TopografiaSimple >> calcularProporcionAgua [
+	^proporcion
+]
 
 { #category : #boolean }
 TopografiaSimple >> esIgual: unaTopografia [
@@ -22,11 +30,6 @@ TopografiaSimple >> esIgualCompuesta: unaTopografia [
 { #category : #boolean }
 TopografiaSimple >> esIgualTierra [
 	^ self subclassResponsibility
-]
-
-{ #category : #accessing }
-TopografiaSimple >> proporcion [
-	^proporcion
 ]
 
 { #category : #accessing }
